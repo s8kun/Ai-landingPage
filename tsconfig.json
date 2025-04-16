@@ -3,5 +3,9 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx", // ← ضروري في React 17+
+    "noUnusedLocals": false // ← يمنع TypeScript من اعتبار import غير مستخدم كخطأ
+  }
 }
