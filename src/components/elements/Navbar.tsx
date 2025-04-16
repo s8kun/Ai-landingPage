@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../assets/icon.svg";
 import { Container } from "../shared/Container";
 import { NavItem } from "../shared/NavItem";
