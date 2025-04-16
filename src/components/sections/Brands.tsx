@@ -1,6 +1,20 @@
 import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
-const logos = ["discord", "openai", "paypal", "slack", "spotify", "youtube"];
+import discordLogo from "../../assets/logos/discord.png";
+import openaiLogo from "../../assets/logos/openai.png";
+import paypalLogo from "../../assets/logos/paypal.png";
+import slackLogo from "../../assets/logos/slack.png";
+import spotifyLogo from "../../assets/logos/spotify.png";
+import youtubeLogo from "../../assets/logos/youtube.png";
+
+const logos = [
+  { name: "discord", src: discordLogo },
+  { name: "openai", src: openaiLogo },
+  { name: "paypal", src: paypalLogo },
+  { name: "slack", src: slackLogo },
+  { name: "spotify", src: spotifyLogo },
+  { name: "youtube", src: youtubeLogo },
+];
 export const Brands = () => {
   return (
     <section>
@@ -15,10 +29,10 @@ export const Brands = () => {
               className="p-4 sm:p-5 rounded-xl bg-body border border-box-border group"
             >
               <img
-                src={`"../../assets/logos"${logo}.png`}
+                src={logo.src}
                 width={100}
                 height={60}
-                alt={logo}
+                alt={logo.name}
                 className="h-7 sm:h-10 w-auto ease-linear duration-300 grayscale group-hover:!grayscale-0 group-hover:scale-105"
               />
             </div>
