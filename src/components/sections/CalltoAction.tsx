@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Button } from "../shared/Button";

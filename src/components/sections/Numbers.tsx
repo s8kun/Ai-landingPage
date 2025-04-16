@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "../shared/Container";
 
 export const Numbers = () => {
