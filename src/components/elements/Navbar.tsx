@@ -56,7 +56,7 @@ export const Navbar = () => {
 
           {/* Mobile Hamburger */}
           <button className="lg:hidden" onClick={toggleMobileNav}>
-            <RxHamburgerMenu className="size-8 text-heading-1 mr-2.5" />
+            <RxHamburgerMenu className="size-8 text-heading-1 mr-2.5 cursor-pointer" />
           </button>
 
           {/* Mobile Nav Overlay */}
@@ -67,7 +67,7 @@ export const Navbar = () => {
           >
             <div className="flex justify-end p-4">
               <AiOutlineCloseCircle
-                className="size-10 mr-2.5"
+                className="size-10 mr-2.5 cursor-pointer"
                 onClick={closeMobileNav}
               />
             </div>
@@ -77,7 +77,7 @@ export const Navbar = () => {
                   <a
                     href={item.href}
                     onClick={closeMobileNav}
-                    className="hover:text-yellow-300 transition-colors duration-200"
+                    className="hover:text-violet-300 transition-colors duration-200"
                   >
                     {item.text}
                   </a>
