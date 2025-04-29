@@ -9,7 +9,7 @@ interface ServiceProps {
 
 export const Service = ({ title, description, icon }: ServiceProps) => {
   return (
-    <div className="group relative p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow overflow-hidden transition duration-500">
+    <div className="group relative p-5 sm:p-6 lg:p-8 rounded-3xl border border-box-border bg-box-bg shadow-lg shadow-box-shadow overflow-hidden transition duration-500 cursor-pointer">
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none bg-[linear-gradient(90deg,_rgba(2,0,36,1)_0%,_rgba(22,20,156,1)_51%,_rgba(0,212,255,1)_100%)] z-0 rounded-3xl"></div>
 
       <div className="relative z-10 transition duration-700">

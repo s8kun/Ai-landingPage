@@ -9,7 +9,7 @@ export const Button = ({ onclick, children, className = "" }: ButtonProps) => {
     <button
       onClick={onclick}
       className={`px-6 py-3 rounded-full outline-none cursor-pointer
-        relative overflow-hidden border border-transparent bg-violet-600 ${className}`}
+        relative overflow-hidden border border-transparent bg-blue-600 dark:bg-violet-600 ${className}`}
     >
       {children}
     </button>
