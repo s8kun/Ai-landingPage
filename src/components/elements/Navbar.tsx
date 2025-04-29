@@ -56,7 +56,7 @@ export const Navbar = () => {
 
           {/* Mobile Hamburger */}
           <button className="lg:hidden" onClick={toggleMobileNav}>
-            <RxHamburgerMenu className="size-8 text-heading-1" />
+            <RxHamburgerMenu className="size-8 text-heading-1 mr-2.5" />
           </button>
 
           {/* Mobile Nav Overlay */}
