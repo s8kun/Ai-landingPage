@@ -55,13 +55,29 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Hamburger */}
-          <button className="lg:hidden" onClick={toggleMobileNav}>
-            <RxHamburgerMenu className="size-8 text-heading-1 mr-2.5 cursor-pointer" />
-          </button>
+          <div className="flex text-center gap-6">
+            <button
+              onClick={toggleTheme}
+              className="p-3 rounded-full border border-gray-400"
+            >
+              {theme === "dark" ? (
+                <MdOutlineLightMode className="text-white size-6" />
+              ) : (
+                <MdOutlineDarkMode className="text-black size-6" />
+              )}
+            </button>
+            <button className="lg:hidden " onClick={toggleMobileNav}>
+              <RxHamburgerMenu className="size-8 text-heading-1 mr-2.5 cursor-pointer" />
+            </button>
+          </div>
 
           {/* Mobile Nav Overlay */}
           <div
-            className={`fixed inset-0 bg-gray-900 text-white transform transition-transform duration-300 ease-in-out z-40 ${
+            className={`fixed inset-0 ${
+              theme === "dark"
+                ? `bg-gray-900 text-white`
+                : `bg-white text-black`
+            } transform transition-transform duration-300 ease-in-out z-40 ${
               isMobileNavOpen ? "translate-x-0" : "translate-x-full"
             } lg:hidden`}
           >
