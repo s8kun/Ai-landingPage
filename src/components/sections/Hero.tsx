@@ -5,7 +5,7 @@ import { Numbers } from "./Numbers";
 import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <section className="relative pt-32 lg:pt-36">
       <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
@@ -33,8 +33,11 @@ export const Hero = () => {
             <div className="flex sm:flex-row flex-col gap-5 w-full">
               <form
                 action="#"
-                className="py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3
-                    shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear focus-within:bg-body focus-within:border-primary"
+                className={`py-1
+                  ${i18n.dir() === "rtl" ? "pl-1" : "pl-6"}
+                  w-full pr-1 flex gap-3 items-center text-heading-3
+                    shadow-lg shadow-box-shadow border border-box-border bg-box-bg rounded-full ease-linear
+                     focus-within:bg-body focus-within:border-primary`}
               >
                 <span className="min-w-max pr-2 border-box-border ">
                   <svg
