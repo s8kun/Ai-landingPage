@@ -33,13 +33,13 @@ export const Navbar = () => {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-6">
-            <ul className="flex gap-6 text-heading-2">
+          <div className="hidden lg:flex items-center justify-between flex-1 ml-12">
+            <ul className="flex gap-5 text-heading-2">
               {navItems.map((item, key) => (
                 <NavItem key={key} href={item.href} text={item.text} />
               ))}
             </ul>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4.5 mr-3">
               <BtnLink text="Get Started" href="#cta" />
               <button
                 onClick={toggleTheme}
@@ -54,11 +54,11 @@ export const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Hamburger */}
-          <div className="flex text-center gap-6">
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-3 lg:hidden">
             <button
               onClick={toggleTheme}
-              className="p-3 rounded-full border border-gray-400"
+              className="p-2 rounded-full border border-gray-400"
             >
               {theme === "dark" ? (
                 <MdOutlineLightMode className="text-white size-6" />
@@ -66,24 +66,24 @@ export const Navbar = () => {
                 <MdOutlineDarkMode className="text-black size-6" />
               )}
             </button>
-            <button className="lg:hidden " onClick={toggleMobileNav}>
-              <RxHamburgerMenu className="size-8 text-heading-1 mr-2.5 cursor-pointer" />
+            <button onClick={toggleMobileNav}>
+              <RxHamburgerMenu className="size-8 text-heading-1 cursor-pointer" />
             </button>
           </div>
 
-          {/* Mobile Nav Overlay */}
+          {/* Mobile Nav */}
           <div
             className={`fixed inset-0 ${
               theme === "dark"
-                ? `bg-gray-900 text-white`
-                : `bg-white text-black`
+                ? "bg-gray-900 text-white"
+                : "bg-white text-black"
             } transform transition-transform duration-300 ease-in-out z-40 ${
               isMobileNavOpen ? "translate-x-0" : "translate-x-full"
             } lg:hidden`}
           >
-            <div className="flex justify-end p-4">
+            <div className="flex justify-end p-4 mr-3">
               <AiOutlineCloseCircle
-                className="size-10 mr-2.5 cursor-pointer"
+                className="size-10 cursor-pointer"
                 onClick={closeMobileNav}
               />
             </div>
