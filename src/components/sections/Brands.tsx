@@ -6,7 +6,6 @@ import paypalLogo from "../../assets/logos/paypal.png";
 import slackLogo from "../../assets/logos/slack.png";
 import spotifyLogo from "../../assets/logos/spotify.png";
 import youtubeLogo from "../../assets/logos/youtube.png";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 
 const logos = [
