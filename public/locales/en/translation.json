@@ -1,0 +1,90 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "pricing": "Pricing"
+  },
+  "heading": {
+    "h1": "Empower Your Business",
+    "span": "with AI",
+    "p": "Our AI SaaS platform seamlessly integrates with your existing workflows to deliver real‑time insights, intelligent automation, and data‑driven decision-making. Experience a future where your business runs smarter, faster, and more efficiently."
+  },
+  "button": "Get Started",
+  "Numbers": {
+    "FirstNumber": "AI Models Implemented",
+    "SecondNumber": "Enterprise Clients",
+    "ThirdNumber": "Uptime Guarantee",
+    "FourthNumber": "Years of Innovation"
+  },
+  "Trust": "Trusted by Industry Leaders",
+
+  "Our AI Services": "Our AI Services",
+  "Unlock the potential of advanced machine learning, natural language processing, and predictive analytics. Our services include:": "Unlock the potential of advanced machine learning, natural language processing, and predictive analytics. Our services include:",
+
+  "services": {
+    "intelligentAutomation": {
+      "title": "Intelligent Automation",
+      "description": "Streamline processes and reduce manual tasks."
+    },
+    "realTimeAnalytics": {
+      "title": "Real‑Time Analytics",
+      "description": "Gain actionable insights as events unfold."
+    },
+    "predictiveInsights": {
+      "title": "Predictive Insights",
+      "description": "Anticipate trends and mitigate risks before they occur."
+    }
+  },
+  "aboutSection": {
+    "title": "About Our AI Solution",
+    "description": "We are on a mission to empower businesses with transformative AI technology. Our team of experts combines industry‑leading research with innovative algorithms to deliver a platform that adapts to your unique needs. Join us and lead the digital revolution in your industry."
+  },
+
+  "aboutCard": {
+    "mission": {
+      "title": "Mission",
+      "description": "Something generic"
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Our vision is to drive business innovation and growth."
+    }
+  },
+
+  "pricing": {
+    "title": "Pricing",
+    "description": "Choose the plan that's right for your business",
+    "bestValue": "Best Value",
+    "choosePlan": "Choose Plan"
+  },
+
+  "plans": {
+    "basic": {
+      "title": "Basic",
+      "feature1": "Access to basic AI tools",
+      "feature2": "Limited data analytics",
+      "feature3": "Email support"
+    },
+    "pro": {
+      "title": "Pro",
+      "feature1": "Everything in Basic",
+      "feature2": "Advanced AI features",
+      "feature3": "Real‑time analytics",
+      "feature4": "Priority email support"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "feature1": "Everything in Pro",
+      "feature2": "Dedicated account manager",
+      "feature3": "Custom integrations",
+      "feature4": "24/7 premium support"
+    }
+  },
+  "cta": {
+    "headline": "Quick Start your own",
+    "highlight": "AI business",
+    "description": "Leverage our AI-powered platform to revolutionize your digital marketing efforts. Get data-driven insights and automation at your fingertips.",
+    "button": "Get in Touch"
+  }
+}

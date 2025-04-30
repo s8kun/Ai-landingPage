@@ -2,8 +2,10 @@ import { Container } from "../shared/Container";
 import logo from "../../assets/icon.svg";
 import { navItems } from "./Navbar";
 import { NavItem } from "../shared/NavItem";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="relative pt-20 rounded-t-3xl bg-box-bg">
       <Container className="pb-8">
@@ -15,7 +17,7 @@ export const Footer = () => {
 
           <ul className="flex gap-6 text-heading-1">
             {navItems.map((item, key) => (
-              <NavItem key={key} href={item.href} text={item.text} />
+              <NavItem key={key} href={item.href} text={t(item.key)} />
             ))}
           </ul>
         </div>

@@ -7,12 +7,14 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useThemeStore } from "../../store/ThemeStore";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "../LanguageSwitcher";
 
 export const navItems = [
-  { href: "#", text: "Home" },
-  { href: "#services", text: "Services" },
-  { href: "#about-us", text: "About Us" },
-  { href: "#pricing", text: "Pricing" },
+  { href: "#", key: "navbar.home" },
+  { href: "#services", key: "navbar.services" },
+  { href: "#about-us", key: "navbar.aboutUs" },
+  { href: "#pricing", key: "navbar.pricing" },
 ];
 
 export const Navbar = () => {
@@ -21,6 +23,7 @@ export const Navbar = () => {
 
   const toggleMobileNav = () => setIsMobileNavOpen((prev) => !prev);
   const closeMobileNav = () => setIsMobileNavOpen(false);
+  const { t } = useTranslation();
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 py-6">
@@ -31,16 +34,15 @@ export const Navbar = () => {
             <img src={logo} alt="EdgeAi logo" className="w-10 h-10" />
             <span className="text-xl font-bold text-heading-1">EdgeAi</span>
           </a>
-
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center justify-between flex-1 ml-12">
             <ul className="flex gap-5 text-heading-2">
               {navItems.map((item, key) => (
-                <NavItem key={key} href={item.href} text={item.text} />
+                <NavItem key={key} href={item.href} text={t(item.key)} />
               ))}
             </ul>
             <div className="flex items-center gap-4.5 mr-3">
-              <BtnLink text="Get Started" href="#cta" />
+              <BtnLink text={t("button")} href="#cta" />
               <button
                 onClick={toggleTheme}
                 className="p-3 rounded-full border border-gray-400"
@@ -51,9 +53,9 @@ export const Navbar = () => {
                   <MdOutlineDarkMode className="text-black size-6" />
                 )}
               </button>
+              <LanguageSwitcher />
             </div>
           </div>
-
           {/* Mobile Actions */}
           <div className="flex items-center gap-3 lg:hidden">
             <button
@@ -69,8 +71,8 @@ export const Navbar = () => {
             <button onClick={toggleMobileNav}>
               <RxHamburgerMenu className="size-8 text-heading-1 cursor-pointer" />
             </button>
+            <LanguageSwitcher />
           </div>
-
           {/* Mobile Nav */}
           <div
             className={`fixed inset-0 ${
@@ -89,15 +91,12 @@ export const Navbar = () => {
             </div>
             <ul className="flex flex-col items-center justify-center gap-8 text-lg min-h-[70vh]">
               {navItems.map((item, key) => (
-                <li key={key}>
-                  <a
-                    href={item.href}
-                    onClick={closeMobileNav}
-                    className="hover:text-violet-300 transition-colors duration-200"
-                  >
-                    {item.text}
-                  </a>
-                </li>
+                <NavItem
+                  key={key}
+                  href={item.href}
+                  text={t(item.key)}
+                  onClick={closeMobileNav}
+                />
               ))}
             </ul>
           </div>

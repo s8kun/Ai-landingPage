@@ -1,7 +1,7 @@
 export const service = [
   {
-    title: "Intelligent Automation",
-    description: "Streamline processes and reduce manual tasks.",
+    title: "services.intelligentAutomation.title",
+    description: "services.intelligentAutomation.description",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export const service = [
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-6 h-6  "
+        className="w-6 h-6"
       >
         <path
           strokeLinecap="round"
@@ -20,8 +20,8 @@ export const service = [
     ),
   },
   {
-    title: "Real‑Time Analytics",
-    description: "Gain actionable insights as events unfold.",
+    title: "services.realTimeAnalytics.title",
+    description: "services.realTimeAnalytics.description",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export const service = [
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-6 h-6 "
+        className="w-6 h-6"
       >
         <path
           strokeLinecap="round"
@@ -40,8 +40,8 @@ export const service = [
     ),
   },
   {
-    title: "Predictive Insights",
-    description: " Anticipate trends and mitigate risks before they occur.",
+    title: "services.predictiveInsights.title",
+    description: "services.predictiveInsights.description",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export const service = [
         viewBox="0 0 24 24"
         strokeWidth="1.5"
         stroke="currentColor"
-        className="w-6 h-6 "
+        className="w-6 h-6"
       >
         <path
           strokeLinecap="round"

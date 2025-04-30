@@ -2,8 +2,10 @@ import { Container } from "../shared/Container";
 import { Paragraph } from "../shared/Paragraph";
 import { Button } from "../shared/Button";
 import { Numbers } from "./Numbers";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section className="relative pt-32 lg:pt-36">
       <Container className="flex flex-col lg:flex-row gap-10 lg:gap-12">
@@ -21,17 +23,12 @@ export const Hero = () => {
         mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
         >
           <h1 className="text-heading-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-            Empower Your Business{" "}
+            {t("heading.h1")}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 ml-2">
-              with AI
+              {t("heading.span")}
             </span>
           </h1>
-          <Paragraph className="mt-8">
-            Our AI SaaS platform seamlessly integrates with your existing
-            workflows to deliver real‑time insights, intelligent automation, and
-            data‑driven decision-making. Experience a future where your business
-            runs smarter, faster, and more efficiently.
-          </Paragraph>
+          <Paragraph className="mt-8">{t("heading.p")}</Paragraph>
           <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
               <form
@@ -62,7 +59,7 @@ export const Hero = () => {
                   className="w-full py-3 outline-none bg-transparent "
                 />
                 <Button className="min-w-max text-white">
-                  <span className="relative z-[5]">Get Started</span>
+                  <span className="relative z-[5]">{t("button")}</span>
                 </Button>
               </form>
             </div>

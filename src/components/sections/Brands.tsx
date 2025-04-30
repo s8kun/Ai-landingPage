@@ -6,6 +6,8 @@ import paypalLogo from "../../assets/logos/paypal.png";
 import slackLogo from "../../assets/logos/slack.png";
 import spotifyLogo from "../../assets/logos/spotify.png";
 import youtubeLogo from "../../assets/logos/youtube.png";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const logos = [
   { name: "discord", src: discordLogo },
@@ -16,11 +18,12 @@ const logos = [
   { name: "youtube", src: youtubeLogo },
 ];
 export const Brands = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <Container className="space-y-8">
         <div className="text-center max-w-3xl mx-auto">
-          <Title>Trusted by Industry Leaders</Title>
+          <Title>{t("Trust")}</Title>
         </div>
         <div className="flex justify-center flex-wrap gap-4">
           {logos.map((logo, key) => (

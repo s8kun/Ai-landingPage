@@ -2,8 +2,10 @@ import { Container } from "../shared/Container";
 import { Title } from "../shared/Title";
 import { Paragraph } from "../shared/Paragraph";
 import { Info } from "../cards/Info";
+import { useTranslation } from "react-i18next";
 
 export const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <section id="about-us">
       <Container className="flex flex-col md:flex-row lg:gap-12 gap-10 items-center">
@@ -16,17 +18,14 @@ export const AboutUs = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col">
-          <Title>About Our AI Solution</Title>
-          <Paragraph>
-            We are on a mission to empower businesses with transformative AI
-            technology. Our team of experts combines industry‑leading research
-            with innovative algorithms to deliver a platform that adapts to your
-            unique needs. Join us and lead the digital revolution in your
-            industry.
-          </Paragraph>
+        <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col gap-2">
+          <Title>{t("aboutSection.title")}</Title>
+          <Paragraph>{t("aboutSection.description")}</Paragraph>
           <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
-            <Info title="Mission" description="Something generic">
+            <Info
+              title={t("aboutCard.mission.title")}
+              description={t("aboutCard.mission.description")}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -44,8 +43,8 @@ export const AboutUs = () => {
               </svg>
             </Info>
             <Info
-              title="Vision"
-              description="Our vision is to drive business innovation and growth."
+              title={t("aboutCard.vision.title")}
+              description={t("aboutCard.vision.description")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
