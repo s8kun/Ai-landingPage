@@ -4,7 +4,10 @@ export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === "en" ? "ar" : "en");
+    const newLang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
+
+    document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
   };
 
   return (
