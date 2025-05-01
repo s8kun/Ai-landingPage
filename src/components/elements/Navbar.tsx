@@ -52,9 +52,9 @@ export const Navbar = () => {
                 className="p-3 rounded-full border border-gray-400"
               >
                 {theme === "dark" ? (
-                  <MdOutlineLightMode className="text-white size-6" />
+                  <MdOutlineLightMode className="text-yellow-400 size-6" />
                 ) : (
-                  <MdOutlineDarkMode className="text-black size-6" />
+                  <MdOutlineDarkMode className="text-balck size-6" />
                 )}
               </button>
               <LanguageSwitcher />
@@ -67,7 +67,7 @@ export const Navbar = () => {
               className="p-2 rounded-full border border-gray-400"
             >
               {theme === "dark" ? (
-                <MdOutlineLightMode className="text-white size-6" />
+                <MdOutlineLightMode className="text-yellow-400 size-6" />
               ) : (
                 <MdOutlineDarkMode className="text-black size-6" />
               )}
