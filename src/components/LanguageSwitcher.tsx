@@ -13,9 +13,9 @@ export const LanguageSwitcher = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="outline-none px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 cursor-pointer hover:scale-105 transition duration-300"
+      className="outline-none px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 cursor-pointer hover:scale-105 transition duration-300 text-white"
     >
-      {i18n.language === "en" ? "عربي" : "English"}
+      {i18n.language === "en" ? "Arabic" : "English"}
     </button>
   );
 };

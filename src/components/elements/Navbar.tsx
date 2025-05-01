@@ -42,7 +42,11 @@ export const Navbar = () => {
               ))}
             </ul>
             <div className="flex items-center gap-4.5 mr-3">
-              <BtnLink text={t("button")} href="#cta" />
+              <BtnLink
+                className="outline-none"
+                text={t("button")}
+                href="#cta"
+              />
               <button
                 onClick={toggleTheme}
                 className="p-3 rounded-full border border-gray-400"
